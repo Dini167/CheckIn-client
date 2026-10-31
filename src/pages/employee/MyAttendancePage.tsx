@@ -22,7 +22,7 @@ export default function MyAttendancePage() {
         <div className="page">
             <h1 className="page-title">הנוכחות שלי בחודש {new Date(dayCalendar).toLocaleString("default", { month: "long" })}</h1>
             { quota &&
-                (quota?.unlimited ? <p className="quota-note">מכסת התיקונים בלתי מוגבלת</p> : <p className="quota-note">נשארו לך {quota.remaining} תיקונים השבוע</p>)
+                (quota?.unlimited ? <p className="quota-note">מכסת התיקונים בלתי מוגבלת</p> : <p className="quota-note">נשארו לך {quota.remaining} יציאות לשבוע הנוכחי</p>)
             }
         {isLoading && <p className="loading">טוען...</p>}
         {error && <p className="alert alert-danger py-2" style={{ color: 'red' }}>{error}</p>}
